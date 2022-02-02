@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+class no
+{
+    int a;
+    public:
+    no()
+    {
+        a=0;
+    }
+    no(int x)
+    {
+        a=x;
+    }
+    no(no &obj)
+    {
+        a=obj.a;
+    }
+    void print()
+    {
+        cout<<"No: "<<a<<endl;
+    }
+};
+int main()
+{
+   no d,e,f(2);
+   d.print();
+   e.print();
+   f.print();
+   no w(f);
+   w.print();
+   
+}
